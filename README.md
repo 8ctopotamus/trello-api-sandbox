@@ -21,9 +21,10 @@ Create a `.env.local` file in the root of the project.
 ```
 TRELLO_API_KEY=
 TRELLO_API_SECRET=
+TRELLO_API_TOKEN=
 ```
 
-Create a Trello Power-up to get an API Key and Secret.
+Create a Trello Power-up to [get an API Key, Secret, and token](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/).
 
 ---
 
