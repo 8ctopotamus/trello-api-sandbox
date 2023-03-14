@@ -1,3 +1,22 @@
+# Trello API Sandbox
+
+## TODO
+
+* [ ] Assign Trello cards to a Deal
+* [ ] Integrate with more than one board
+* [ ] Tracking cards as they move across the board
+* [ ] Add Comments to the card
+* [ ] Can we assign a Note Type (an enumeration we'll add to support the new Notes table) based upon which board the card came from?
+import mongoose from 'mongoose'
+
+## Notes
+
+* https://dev.to/raphaelchaula/adding-mongodb-mongoose-to-next-js-apis-3af
+
+---
+
+## NextJS
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
