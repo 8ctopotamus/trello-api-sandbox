@@ -1,10 +1,16 @@
-import { Schema, model, models } from 'mongoose'
+import mongoose from 'mongoose'
 
-const dealSchema = new Schema({
+const dealSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
+  },
+  trelloCards: {
+    type: [
+      { type: mongoose.Schema.Types.Mixed },
+    ],
+    default: [],
   }
 })
 
-export const Deal = models.Deal || model('Deal', dealSchema)
+export const Deal = mongoose.models.Deal || mongoose.model('Deal', dealSchema)

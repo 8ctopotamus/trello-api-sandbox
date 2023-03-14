@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 export default function Home({ deals = [] }) {
-  console.log(deals)
   return (
     <>
       <Head>

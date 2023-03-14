@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default function Deal({ deal = null }) {
+export default function Deal({ deal, boards }) {
+  console.log(boards)
   return !deal ? <p>Loading deal...</p> : (
     <>
       <Head>
@@ -13,6 +14,12 @@ export default function Deal({ deal = null }) {
         </h1>
         <h2>_id: {deal._id}</h2>
         
+        <h2>Assigned Trello Cards:</h2>
+        {deal.trelloCards.length > 0 ? deal.trelloCards.map(card => {
+          return 'CARD'
+        }) : (
+          <p>There are no trello cards assigned yet.</p>
+        )}
       </main>
     </>
   )
@@ -20,10 +27,11 @@ export default function Deal({ deal = null }) {
 
 export async function getServerSideProps(context) {
   const response = await fetch(`${process.env.ORIGIN}/api/deal/${context.params._id}`)
-  const deal = await response.json()
+  const { deal, boards } = await response.json()
   return {
     props: {
       deal,
+      boards,
     }
   }
 }

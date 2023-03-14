@@ -2,8 +2,8 @@
 
 ## TODO
 
-* [ ] Assign Trello cards to a Deal
 * [ ] Integrate with more than one board
+* [ ] Assign Trello cards to a Deal
 * [ ] Tracking cards as they move across the board
 * [ ] Add Comments to the card
 * [ ] Can we assign a Note Type (an enumeration we'll add to support the new Notes table) based upon which board the card came from?
@@ -19,6 +19,7 @@ import mongoose from 'mongoose'
 Create a `.env.local` file in the root of the project.
 
 ```
+ORIGIN=http://localhost:3000
 TRELLO_API_KEY=
 TRELLO_API_SECRET=
 TRELLO_API_TOKEN=
