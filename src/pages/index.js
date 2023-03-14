@@ -6,8 +6,8 @@ export default function Home({ deals = [] }) {
     <>
       <CustomHead />
       <main className="container mx-auto px-2">
-        <h1 className="text-4xl font-bold mb-4 underline">Trello API Sandbox</h1>
-        <h2 className="text-2xl font-bold underline">Deals</h2>
+        <h1>Trello API Sandbox</h1>
+        <h2>Deals</h2>
         <ul>
           {deals.map(d => (
             <li key={d._id}>

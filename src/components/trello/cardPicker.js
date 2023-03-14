@@ -23,7 +23,7 @@ const TrelloCardPicker = ({
 
   return (
     <>
-      <h2 className="text-2xl font-bold underline">Watched Trello Cards:</h2>
+      <h2>Watched Trello Cards:</h2>
       {deal.trelloCards.length > 0 ? deal.trelloCards.map(card => {
         return 'CARD'
       }) : (
@@ -32,16 +32,21 @@ const TrelloCardPicker = ({
 
       {selectedBoard ? (
         <>
-          <h2 className="mt-4 text-2xl font-bold underline">{selectedBoard?.name}</h2>
-          <button onClick={() => setSelectedBoardId(null)}>&times; Close</button>
+          <div className="flex justify-between align-center my-5">
+            <h2 className="font-bold mr-5">{selectedBoard?.name}</h2>
+            <button 
+              onClick={() => setSelectedBoardId(null)}
+              className="btn"
+            >&times; Close</button>
+          </div>
           <div className="grid gap-4 grid-cols-6">
             {lists.map(({ name, cards = []}) => (
               <div className="flex flex-col max-w-sm mr-1 mb-3 border-2 border-black p-2">
-                <h3 className="font-bold">{name}</h3>
+                <h3 className="font-bold mb-2">{name}</h3>
                 {cards.map(card => {
                   // console.log(card)
                   return (
-                    <div className="mb-2 border-2 border-black p-2">
+                    <div className="card mb-2 border-2 border-black p-2">
                       {card.name.length > 80 ? `${card.name.slice(0, 80)}...` : card.name}
                     </div>
                   )
@@ -52,17 +57,26 @@ const TrelloCardPicker = ({
         </>
       ) : (
         <>
-          <h2 className="text-2xl font-bold underline">Trello Boards</h2>
+          <h2>Trello Boards</h2>
           <ul>
             {boards.length > 0 ? boards.map(({ id, name }) => {
               return (
-                <li key={id}>
-                  {name}
-                  <button onClick={() => setSelectedBoardId(id)}>Get Lists</button>
+                <li className="flex align-center mb-5" key={id}>
+                  <h2 className="font-bold">{name}</h2>
+                  <button 
+                    onClick={() => setSelectedBoardId(id)}
+                    className="btn"
+                  >
+                    Get Lists
+                  </button>
                 </li>
               )
             }) : (
-              <p>No Trello boards detected.</p>
+              <div className="alert alert-warning shadow-lg">
+                <div>
+                  <span>No Trello boards detected.</span>
+                </div>
+              </div>
             )}
           </ul>
         </>
