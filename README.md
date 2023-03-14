@@ -19,7 +19,7 @@ import mongoose from 'mongoose'
 Create a `.env.local` file in the root of the project.
 
 ```
-ORIGIN=http://localhost:3000
+NEXT_PUBLIC_ORIGIN=http://localhost:3000
 TRELLO_API_KEY=
 TRELLO_API_SECRET=
 TRELLO_API_TOKEN=

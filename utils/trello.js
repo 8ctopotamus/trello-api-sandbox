@@ -1,3 +1,5 @@
+const API_URL = 'https://api.trello.com'
+
 const talkToTrello = async (url, {
   method = 'GET',
   headers = {},
@@ -28,5 +30,20 @@ const talkToTrello = async (url, {
 }
 
 export const getBoards = async () => {
-  return await talkToTrello(`https://api.trello.com/1/members/me/boards`)
+  return await talkToTrello(`${API_URL}/1/members/me/boards?fields=name,url`)
+}
+
+export const getBoardListsAndCards = async boardId => {
+  const results = []
+    
+  let lists = await talkToTrello(`${API_URL}/1/boards/${boardId}/lists`)
+
+  if (lists) {
+    for (const list of lists) {
+      let cards = await talkToTrello(`${API_URL}/1/lists/${list.id}/cards`)
+      results.push({ ...list, cards })
+    }  
+  }
+
+  return results
 }
