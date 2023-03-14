@@ -11,7 +11,19 @@ import mongoose from 'mongoose'
 
 ## Notes
 
+* https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/
 * https://dev.to/raphaelchaula/adding-mongodb-mongoose-to-next-js-apis-3af
+
+## Setup
+
+Create a `.env.local` file in the root of the project.
+
+```
+TRELLO_API_KEY=
+TRELLO_API_SECRET=
+```
+
+Create a Trello Power-up to get an API Key and Secret.
 
 ---
 
