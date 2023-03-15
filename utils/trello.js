@@ -47,3 +47,12 @@ export const getBoardListsAndCards = async boardId => {
 
   return results
 }
+
+export const getCards = async (cardIds = []) => {
+  const cards = []
+  for (const id of cardIds) {
+    const card = await talkToTrello(`${API_URL}/1/cards/${id}`)
+    cards.push(card)
+  }
+  return cards
+}

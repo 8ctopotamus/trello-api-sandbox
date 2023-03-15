@@ -6,9 +6,7 @@ const dealSchema = new mongoose.Schema({
     required: true,
   },
   trelloCards: {
-    type: [
-      { type: mongoose.Schema.Types.Mixed },
-    ],
+    type: [String],
     default: [],
   }
 })

@@ -5,7 +5,7 @@ export default function Home({ deals = [] }) {
   return (
     <>
       <CustomHead />
-      <main className="container mx-auto px-2">
+      <main className="prose container mx-auto px-2">
         <h1>Trello API Sandbox</h1>
         <h2>Deals</h2>
         <ul>

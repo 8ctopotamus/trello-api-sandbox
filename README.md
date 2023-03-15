@@ -2,12 +2,12 @@
 
 ## TODO
 
-* [ ] Integrate with more than one board
-* [ ] Assign Trello cards to a Deal
+* [x] Integrate with more than one board
+* [...] Assign Trello cards to a Deal
 * [ ] Tracking cards as they move across the board
+* [ ] Show Trello Card Comments
 * [ ] Add Comments to the card
 * [ ] Can we assign a Note Type (an enumeration we'll add to support the new Notes table) based upon which board the card came from?
-import mongoose from 'mongoose'
 
 ## Notes
 
