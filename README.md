@@ -13,6 +13,7 @@
 
 * https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/
 * https://dev.to/raphaelchaula/adding-mongodb-mongoose-to-next-js-apis-3af
+* [Trello Webhooks](https://developer.atlassian.com/cloud/trello/guides/rest-api/webhooks/#deleting-webhooks)
 
 ## Setup
 
