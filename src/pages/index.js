@@ -1,4 +1,5 @@
 import CustomHead from "@/components/head"
+import TrelloSignin from "@/components/sign-in-button"
 import Link from 'next/link'
 
 export default function Home({ deals = [] }) {
@@ -6,6 +7,9 @@ export default function Home({ deals = [] }) {
     <>
       <CustomHead />
       <main className="prose container mx-auto px-2">
+        
+        <TrelloSignin />
+
         <h1>Trello API Sandbox</h1>
         <h2>Deals</h2>
         <ul>
